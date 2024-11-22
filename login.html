@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="icon" href="favicon.png">
+<style>
+body{
+background-image:url('bg1.jpg');
+background-size:cover;
+}
+
+p{
+margin-left:20px;
+color:#800060; 
+font-weight:bold;
+font-size:17px;
+}
+
+#frm{
+font-size:18px;
+text-align:center;
+font-weight:bold;
+margin-left:830px;
+padding:60px;
+height:300px;
+width:300px;
+border-radius:0px 70px;
+background-color:#b3d9ff;
+box-shadow:10px 10px 5px grey;
+}
+
+input[type="text"],input[type="password"]{
+padding:8px 30px;
+text-align:center;
+border-radius:6px;
+}
+
+button{
+padding:10px 15px;
+border-radius:5px;
+background-color:#e6e6ff;
+}
+
+button:hover{
+background-color:#ccccff;
+box-shadow:7px 7px 7px #8cb3d9;
+}
+
+#logo{
+margin-top:5px;
+margin-left:40px;
+height:70px;
+width:130px;
+border-radius:10px 40px;
+}
+</style>
+</head>
+<script>
+	function valid()
+	{
+	var username = document.getElementById("name").value;
+	var password = document.getElementById("pass").value;
+
+	if (username=="vaish" && password=="vaish@123")
+	{
+		localStorage.setItem('isLoggedIn', 'true');
+		alert("Login Sucessfully..!");
+		window.location.href = "Home.html";
+		return false;
+	}
+	else
+	{
+		alert("OOPS..!! Wrong Username or Password");
+		return false;
+	}
+	}
+
+	 history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+      history.go(1);
+    };
+	
+</script>
+<body>
+	<header>
+	<img src="logo.png" id="logo">
+	<p>"Change is the only Constant"</p>
+	</header>
+	
+	<div id="frm">
+	<h1 style="color:purple;font-family:cambria"> LOGIN </h1>
+	<form>
+	Username <input type="text" autofocus required id="name"><br><br>
+	Password <input type="password" required id="pass"><br><br><br>
+	<button type="button" onclick="valid()">Submit</button>&nbsp&nbsp&nbsp
+	<button type="reset">Reset</button>
+	</form>
+	</div>
+
+	<footer>
+	
+	
+	</footer>
+</body>
+
+</html>

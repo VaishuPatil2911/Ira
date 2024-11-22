@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ira</title>
+	<link rel="icon" href="favicon.png">
+
+<style>
+body{
+margin:0;
+padding:0;
+}
+
+h2{
+font-family:cursive;
+margin-left:100px;
+margin-right:100px;
+color:purple;
+}
+
+nav{
+background-color:#ffcc99;
+}
+
+#over:hover{
+height:60px;
+width:60px;
+text-decoration:underline;
+border-radius:0px 15px;
+}
+
+#logo{
+margin-top:5px;
+margin-left:30px;
+height:70px;
+width:130px;
+border-radius:10px 40px;
+}
+
+nav img{
+margin-left:70px;
+height:50px;
+width:50px;
+}
+
+section{
+background:url('sectionbg4.jpg');
+background-size:cover;
+}
+
+section table{
+border-spacing:100px;
+}
+
+section td{
+font-size:30px;
+text-align:center;
+border-radius:25px;
+height:300px;
+width:350px;
+background-color:#009999;
+}
+
+section td img{
+height:150px;
+width:150px;
+}
+
+footer{
+text-align:center;
+font-family:georgia;
+background-color:#999999;
+}
+
+footer td img{
+margin-left:50px;
+float:left;
+height:50px;
+width:60px;
+}
+
+#gift{
+margin-left:850px;
+height:45px;
+}
+
+#tbl{
+border-spacing:100px 10px;
+}
+
+#tbl td a{
+color:#00334d;
+text-decoration:none;
+}
+
+#tbl td:hover{
+font-size:18px;
+}
+
+hr{
+width:700px;
+border:1px solid #b30047;
+}
+</style>
+</head>
+
+<body>
+<script>
+function logout() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'login.html';
+        }
+
+        window.onload = function() {
+            var isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (!isLoggedIn && window.location.href.indexOf('login.html') === -1) {
+                window.location.href = 'login.html'; 
+            }
+        }
+</script>
+    	<nav>
+	<table>
+	<tr>
+		<header>
+		<td><img src="logo.png" id="logo"></td>
+		<td><h2>"Dive into the Infinite: Knowledge, an Ocean of Wisdom."</h2></td>
+		</header>
+		<td><a href="port.html"><img src="man.png" id="over" title="PortFolio-About Me"></a></td>
+		<td><a href="login.html"><img src="check-out.png" id="over" title="Log-Out" onclick="logout()"></a></td>
+	</tr>
+	</table>
+	</nav>
+
+	<section>
+	<table>
+	<tr>
+		<td><a href=""><img src="html.png"></a><br>HTML</td>
+		<td><a href=""><img src="css.png"></a><br>CSS</td>
+		<td><a href=""><img src="java-script.png"></a><br>JavaScript</td>
+	</tr>
+
+	<tr>
+		<td><a href=""><img src="letter-c.png"></a><br>C</td>
+		<td><a href=""><img src="c-.png"></a><br>C++</td>
+		<td><a href=""><img src="java.png"></a><br>Java</td>
+	</tr>
+	
+	<tr>
+		<td><a href=""><img src="python.png"></a><br>Python</td>
+		<td><a href=""><img src="microsoft.png"></a><br>MS Office</td>
+		<td><a href=""><img src="mysql.png"></a><br>MySQL</td>
+	</tr>
+	</table>
+	</section>
+
+	<footer>
+	<h3 style="color:#b30047"> Ira </h3>
+	<table>
+	<tr>
+	<td><img src="logo.png" id="logo"></td>
+	<td style="color:#b30047">Ira Copyright &copy; <br><br><span style="color:black">Creator -</span><br>Ms. Vaish Patil </td>
+	<td><a href=""><img src="hi.png" id="gift"></a></td>
+	<td><a href=""><img src="knowledge.png"></a></td>
+	</tr>	
+	</table>
+	<p style="color:#800060; font-weight:bold; font-size:18px">Ira - "Change is the only Constant"</p><hr><br><br>
+
+	<table id="tbl">
+	<tr>
+	<th> Important Links </th>
+	<th> Useful Links </th>
+	<th> Additional Reference </th>
+	</tr>
+
+	<tr>
+	<td><a href="">abc</a></td>
+	<td><a href="">abc</a></td>
+	<td><a href="">abc</a></td>
+	</tr>
+
+	<tr>
+	<td><a href="">abc</a></td>
+	<td><a href="">abc</a></td>
+	<td><a href="">abc</a></td>
+	</tr>
+
+	<tr>
+	<td><a href="">abc</a></td>
+	<td><a href="">abc</a></td>
+	<td><a href="">abc</a></td>
+	</tr>
+	</table>
+	</footer>
+</body>
+
+</html>
